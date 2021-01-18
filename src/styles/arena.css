@@ -61,3 +61,25 @@
   width: 100%;
   background-color: #ebd759;
 }
+
+.arena___health-bar::before {
+  display: block;
+  position: absolute;
+  top: 58px;
+  font-size: 30px;
+}
+#right-fighter-indicator::before {
+  right: 20px;
+}
+#left-fighter-indicator::before {
+  left: 20px;
+}
+.arena___health-hit::before {
+  content: '👊';
+}
+.arena___health-crit::before {
+  content: '🦶';
+}
+.arena___health-block::before {
+  content: '🛡️';
+}
