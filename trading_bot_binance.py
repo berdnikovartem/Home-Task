@@ -495,6 +495,7 @@ def open_short_position(symbol, amount):
     try:
         ticker = binance.fetch_ticker(symbol)
         entry_price = ticker['last']
+        send_telegram_message(f"Submitting SHORT order for {symbol}: {amount} at {entry_price}")
         order = binance.create_order(
             symbol=symbol,
             type='limit',
@@ -512,6 +513,7 @@ def open_long_position(symbol, amount):
     try:
         ticker = binance.fetch_ticker(symbol)
         entry_price = ticker['last']
+        send_telegram_message(f"Submitting LONG order for {symbol}: {amount} at {entry_price}")
         order = binance.create_order(
             symbol=symbol,
             type='limit',
